@@ -1,0 +1,332 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/myStyle.css">
+     <!-- Scripts -->
+     <script src="jScripts/jquery-1.12.0.min.js"></script>
+     <script src="jScripts/JavaScript.js" type="text/javascript">  </script>
+
+</head>
+<body>
+    <!-- ראש החלק באתר -->
+    <header class="header">
+        <!-- רקע של הכותרת -->
+        <div class="header__background"></div>
+        <!-- מיכל עבור כל תכני הכותרת -->
+        <div class="header__container">
+            <!-- לוגו עם קישור לדף הבית -->
+            <a class="header__logo" href="/"><img src="image/New_logo.svg" alt="logo"></a>
+            <!-- מיכל עבור תפריט הכותרת -->
+            <div class="header__menu-container">
+                <!-- תפריט הניווט -->
+                <nav class="header__nav">
+                    <!-- רשימת קישורי התפריט -->
+                    <ul class="header__nav-links">
+                        <li class="header__nav-item"><a class="header__nav-link" href="home.html">HOME</a></li>
+                        <li class="header__nav-item"><a class="header__nav-link" href="about.html">ABOUT US</a></li> <!-- פריט קישור לדף אודות -->
+                        <li class="header__nav-item"><a class="header__nav-link" href="#">DESTINATION</a></li> <!-- פריט קישור ליעדים -->
+                        <li class="header__nav-item"><a class="header__nav-link" href="#">DEPARTURES</a></li> <!-- פריט קישור ליציאות -->
+                    </ul>
+                </nav>
+                <!-- כפתור קריאה לפעולה "צור קשר" -->
+                <a class="header__cta" href="contact.html">GET IN TOUCH</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- אזור תוכן גיבור (Hero) -->
+        <section class="hero-content hero-content--container grid-container">
+            <!-- טקסט בעמודה השמאלית -->
+            <article class="hero-content__text content-block">
+                <!-- כותרת משנה -->
+                <div class="hero-content__subtitle mb-4">
+                    <h4>Exclusive Journeys to <span class="hero-content__highlight">Middle East</span></h4>
+                </div>
+                <!-- כותרת ראשית -->
+                <div class="hero-content__title">
+                    <h1>Welcome to <span class="hero-content__highlight-large">Israel</span></h1>
+                </div>
+                <!-- פסקה עם תוכן התיאור -->
+                <div class="hero-content__content mt-4">
+                    <p class="hero-content__text-white">Our journeys through Israel reflect the finest qualities of modern adventure travel – remote, exclusive, and flawlessly organized, offering a unique experience of discovering the country’s remarkable landscapes.</p>
+                </div>
+                <!-- כפתור קריאה לפעולה "צור קשר" -->
+                <div class="hero-content__button mt-8">
+                    <a href="contact.html" class="hero-content__cta-outline">
+                        <span>Contact Us</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- עמודה ימנית: מפה -->
+            <aside class="hero-content__map content-block">
+                <div class="hero-content__hero-map relative">
+                    <!-- תמונה של מפת ישראל -->
+                    <img src="image/Full_Map.png" alt="Map of Israel" class="hero-content__map-img">
+                    <div class="hero-content__pins">
+                        <!-- נקודות עניין במפה -->
+                        <div class="hero-content__pin hero-content__pin--1" data-city="City 1"></div> <!-- נקודת עניין 1 -->
+                        <div class="hero-content__pin hero-content__pin--2" data-city="City 2"></div> <!-- נקודת עניין 2 -->
+                        <div class="hero-content__pin hero-content__pin--3" data-city="City 3"></div> <!-- נקודת עניין 3 -->
+                        <div class="hero-content__pin hero-content__pin--4" data-city="City 4"></div> <!-- נקודת עניין 4 -->
+                        <div class="hero-content__pin hero-content__pin--active hero-content__pin--tel-aviv" data-city="Tel-Aviv" class="h4">
+                        </div> <!-- נקודת עניין עבור תל אביב -->
+                    </div>
+                </div>
+            </aside>
+            <!-- כפתור גלילה להמשך -->
+            <div class="hero-content__scroll-btn-container" onclick="scrollToNextSection()">
+                <div class="hero-content__scroll-btn">
+                    <img src="image/borderbtn.png" alt="Button Border" class="hero-content__scroll-btn-border"> <!-- גבול של כפתור הגלילה -->
+                    <img src="image/FullMapBtn.png" alt="Scroll Text" class="hero-content__scroll-btn-text"> <!-- טקסט כפתור הגלילה -->
+                </div>
+            </div>
+        </section>
+        <figure class="credit credit__container">
+            <img src="/Users/anton/Desktop/IsraelTour/image/credit.svg" alt="credit" class="credit__image"> <!-- תמונה שמייצגת כרטיס אשראי -->
+        </figure>
+        
+        <section id="section2" class="section2">
+            <div class="section2__container">
+                <figure class="section2__image">
+                    <img src="image/image_for_section2.jpg" width="100%" alt="Private Tours of Jerusalem"> <!-- תמונה ראשית של סיור פרטי בירושלים -->
+                </figure>
+                <figure class="section2__secondary-image">
+                    <img src="image/map_stroke.svg" width="100%" alt="Navigating Access to Challenging Destinations"> <!-- תמונה משנית עם מפה של גישה ליעדים מאתגרים -->
+                </figure>
+                <div class="section2__content">
+                    <div class="section2__subtitle mb-4"></div> <!-- תת כותרת עם מרווח תחתון של 4 -->
+                    <div class="section2__headline">
+                        <h4 class="section2__headline-title">Why Choose<span class="section2__headline-highlight"> Israel</span></h4> <!-- כותרת טקסט ראשי -->
+                        <h2 class="section2__headline-header">EXCLUSIVE JOURNEYS <span class="section2__headline-textBlack"> AND SELECT DEPARTURES TO REMOTE CORNERS OF <span class="section2__headline-highlight-large">ISRAEL</span></h2> <!-- כותרת משנית עם הדגשה למילה ישראל -->
+                    </div>
+                    <div class="section2__description">
+                        <p>We specialise in providing curious travellers with access to regions and communities that would otherwise prove challenging.</p> <!-- פסקה שמתארת התמחות בארגון נסיעות -->
+                        <p>We are committed to offering unique travel opportunities, to unusual destinations, that are mutually beneficial to all involved.</p> <!-- פסקה שמסבירה את מחויבות החברה להזדמנויות ייחודיות -->
+                        <a href="contact.html" class="cta-outline btn section2__cta section2__cta-outline black-text">
+                            <span>Contact Us</span> <!-- כפתור לחיץ עם קריאה ליצירת קשר -->
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+
+
+        <section class="section3 section3--custom"> <!-- סקשן מותאם אישית עם מחלקות BEM -->
+            <div class="section3__image-container"> <!-- מיכל לתמונה -->
+                <img src="image/bg-sand.png" alt="Your Image"> <!-- תמונה ראשונה -->
+            </div>
+            <div class="section3__image-container"> <!-- מיכל נוסף לתמונה -->
+                <img src="image/bg-sand.png" alt="Your Image"> <!-- תמונה שנייה -->
+            </div>
+            <div class="section3__absolute-container"> <!-- מיכל עבור תוכן נוסף, במיקום מוחלט -->
+                <div class="section3__left-column"> <!-- עמודה שמאלית -->
+                    <h2>WHERE WE <span class="section3__highlight">OPERATE</span></h2> <!-- כותרת עם הדגשה -->
+                </div>
+                <div class="section3__right-column"> <!-- עמודה ימנית -->
+                    <p class="section3__text section3__text--black"> <!-- פסקה עם טקסט שחור -->
+                        <strong><span class="section3__highlight">Israel Travel</span></strong> expertly organizes journeys across Israel's diverse landscapes, offering seamless tours to the country’s most extraordinary corners.
+                    </p>
+                    <p class="section3__text section3__text--main"> <!-- פסקה עם טקסט ראשי -->
+                        From the dynamic deserts of the<strong> <span class="section3__highlight">Negev</span></strong> to the lush, wildlife-rich forests of<strong> <span class="section3__highlight">Carmel</span></strong>, and the secluded shores of<strong> <span class="section3__highlight">Eilat</span></strong> — our trips are as diverse as they are unforgettable.
+                    </p>
+                </div>
+            </div>
+            <div class="section3__grid section3__grid--four-columns"> <!-- גריד עם ארבע עמודות -->
+                <div class="section3__column"> <!-- עמודה ראשונה -->
+                    <div class="section3__image-wrapper"> <!-- מיכל לתמונות -->
+                        <img src="image/north.png" alt="Image 1" class="section3__main-image"> <!-- תמונה ראשית -->
+                        <div class="section3__overlay"> <!-- שכבת כיסוי -->
+                            <img src="image/hover_north.png" alt="Hover Image 1" class="section3__hover-image"> <!-- תמונה להובר -->
+                        </div>
+                    </div>
+                </div>
+                <div class="section3__column"> <!-- עמודה שנייה -->
+                    <div class="section3__image-wrapper"> <!-- מיכל לתמונות -->
+                        <img src="image/Centre.png" alt="Image 2" class="section3__main-image"> <!-- תמונה ראשית -->
+                        <div class="section3__overlay"> <!-- שכבת כיסוי -->
+                            <img src="image/centre_hover.png" alt="Hover Image 2" class="section3__hover-image"> <!-- תמונה להובר -->
+                        </div>
+                    </div>
+                </div>
+                <div class="section3__column"> <!-- עמודה שלישית -->
+                    <div class="section3__image-wrapper"> <!-- מיכל לתמונות -->
+                        <img src="image/east.png" alt="Image 3" class="section3__main-image"> <!-- תמונה ראשית -->
+                        <div class="section3__overlay"> <!-- שכבת כיסוי -->
+                            <img src="image/east_hover.png" alt="Hover Image 3" class="section3__hover-image"> <!-- תמונה להובר -->
+                        </div>
+                    </div>
+                </div>
+                <div class="section3__column"> <!-- עמודה רביעית -->
+                    <div class="section3__image-wrapper"> <!-- מיכל לתמונות -->
+                        <img src="image/south.png" alt="Image 4" class="section3__main-image"> <!-- תמונה ראשית -->
+                        <div class="section3__overlay"> <!-- שכבת כיסוי -->
+                            <img src="image/south_hover.png" alt="Hover Image 4" class="section3__hover-image"> <!-- תמונה להובר -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+
+        
+        
+        <section class="section4"> <!-- סקשן כללי מותאם אישית -->
+            <div class="section4__container"> <!-- קונטיינר ראשי עם מיקום מוחלט -->
+                <div class="section4__column section4__column--left"> <!-- עמודה שמאלית -->
+                    <h2>Looking for <span class="section4__highlight">Inspiration</span></h2> <!-- כותרת עם אזור מודגש -->
+                </div>
+                <div class="section4__column section4__column--right"> <!-- עמודה ימנית -->
+                    <p class="section4__text section4__text--black">
+                        <strong></strong> Here you will find a selection of unique journeys through Israel that reflect the style of travel we offer. All tours can be tailored to your personal preferences and inspiring goals.
+                    </p> <!-- טקסט עם הדגשה בצבע שחור -->
+                </div>
+            </div>
+            <div class="section4__slider"> <!-- סקשן של הסליידר -->
+                <div class="section4__slider-container"> <!-- קונטיינר של הסליידים -->
+                    <div class="section4__slide"> <!-- סלייד בודד נוסף -->
+                        <img src="image/Jerusalem.jpg" alt="Destination 2"> <!-- תמונה של יעד נוסף -->
+                        <a href="Tour.html" class="section4__cta section4__cta--outline">
+                            <span>ORDER A TOUR</span>
+                        </a>
+                    </div>
+                    <div class="section4__slide"> <!-- סלייד בודד -->
+                        <img src="image/Gush_Dan.jpg" alt="Destination 1"> <!-- תמונה של יעד -->
+                        <a href="JerusalemTour/index.html" class="section4__cta section4__cta--outline"> <!-- כפתור עם קישור לטופס יצירת קשר -->
+                            <span>ORDER A TOUR</span>
+                        </a>
+                    </div>
+                    <div class="section4__slide"> <!-- סלייד שלישי -->
+                        <img src="image/Galelia.jpg" alt="Destination 3"> <!-- תמונה של יעד -->
+                        <a href="JerusalemTour/index.html" class="section4__cta section4__cta--outline">
+                            <span>ORDER A TOUR</span>
+                        </a>
+                    </div>
+                    <div class="section4__slide"> <!-- סלייד רביעי -->
+                        <img src="image/Eilat.jpg" alt="Destination 4"> <!-- תמונה של יעד -->
+                        <a href="JerusalemTour/index.html" class="section4__cta section4__cta--outline">
+                            <span>ORDER A TOUR</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="section4__controls"> <!-- כפתורים לשליטה בסליידר -->
+                    <button class="section4__control-button section4__control-button--prev">&lt;</button> <!-- כפתור לחזרה לאחור -->
+                    <button class="section4__control-button section4__control-button--next">&gt;</button> <!-- כפתור למעבר קדימה -->
+                </div>
+            </div>
+        </section>
+        
+
+        <section class="section5"> <!-- סקשן "למה לבחור" -->
+            <div class="section5__grid-container"> <!-- מכולת רשת -->
+                <!-- עמודה שמאלית -->
+                <div class="section5__first-column"> <!-- עמודה ראשונה ברשת -->
+                    <div class="section5__left-grid"> <!-- החלק השמאלי של תת-רשת -->
+                        <img src="image/nastya.png" alt="Image 1" class="section5__image-left"> <!-- תמונה בחלק השמאלי -->
+                    </div>
+                    <div class="section5__right-grid"> <!-- החלק הימני של תת-רשת -->
+                        <img src="image/Sveta.png" alt="Image 2" class="section5__image-right-top"> <!-- תמונה עליונה בחלק הימני -->
+                        <img src="image/Galia.png" alt="Image 3" class="section5__image-right-bottom"> <!-- תמונה תחתונה בחלק הימני -->
+                    </div>
+                </div>
+        
+                <!-- עמודה מרכזית -->
+                <div class="section5__second-column"> <!-- עמודה שנייה ברשת -->
+                    <h2 class="section5__heading">Why <span class="section5__highlight">Choose</span> Israel Travel?</h2> <!-- כותרת הסקשן עם הדגשת המילה "Choose" -->
+                    <p class="section5__text">Israel Travel stands out through our independence, free from corporate constraints, allowing us to fully focus on creating tailor-made experiences for our clients.</p> <!-- טקסט המתאר את העצמאות -->
+                    <p class="section5__text">Our commitment to personalization is complemented by strong relationships with local experts and partners...</p> <!-- טקסט המדגיש את ההתאמה האישית והקשרים עם מומחים מקומיים -->
+                    <a href="contact.html" class="cta-outline btn black-text"> <!-- כפתור "צור קשר" -->
+                        <span>Contact Us</span> <!-- טקסט הכפתור -->
+                    </a>
+                </div>
+        
+                <!-- עמודה ימנית -->
+                <div class="section5__third-column"> <!-- עמודה שלישית ברשת -->
+                    <img src="image/Anton.jpeg" alt="Image 4" class="section5__image-right"> <!-- תמונה בעמודה הימנית -->
+                </div>
+            </div>
+        </section>
+        
+
+        <footer class="footer-section">
+            <!-- החלק העליון עם גרדיאנט ותמונה -->
+            <div class="footer-gradient-section">
+                <div class="footer-gradient-overlay"></div>
+                <div class="footer-gradient-section">
+                    <div class="footer-gradient-overlay"></div>
+                    <div class="footer-gradient-section__background-image">
+                        <img src="image/i s r a e l T r a v e l.png" alt="Background Image" class="footer-gradient-image">
+                    </div>
+                </div>
+            </div>
+        
+            <!-- החלק התחתון עם תמונה על כל הרוחב -->
+            <div class="footer-full-image">
+                <img src="image/ContainerFooter.png" alt="Full Width Background Image">
+                <div class="subscription-section">
+                    <div class="subscription-container">
+                        <div class="subscription-container">
+                            <div class="content-left">
+                                <img src="image/Big_Logo.png" alt="Fitzroy Logo" class="content-logo">
+                            </div>
+        
+                            <!-- טופס רישום עם שדות ומקום להזנת אימייל -->
+                            <div class="subscription-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="first-name">First Name</label>
+                                        <input type="text" id="first-name" name="first-name" placeholder="Anton" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="last-name">Last Name</label>
+                                        <input type="text" id="last-name" name="last-name" placeholder="Blyakher">
+                                    </div>
+                                </div>
+        
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="enquiries@IsraelTravel.Co.Il" required>
+        
+                                <!-- תיבת סימון להסכמה לקבלת אימיילים -->
+                                <div class="checkbox-label">
+                                    <input type="checkbox" id="consent" name="consent" required>
+                                    <label for="consent">I'm happy to receive emails from IsraelTravel</label>
+                                </div>
+        
+                                <button type="submit" class="submit-btn">Submit Email</button>
+                            </div>
+        
+                            <!-- פרטי יצירת קשר -->
+                            <div class="content-right">
+                                <div class="contact-info">
+                                    <p>enquiries@IsraelTravel.Co.Il</p>
+                                    <p>Studio HIT, Ya'akov Fichman St 18, Holon, 5810201,63<br>Holon, Israel</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <div class="info-content">
+                            <p class="copyright">© COPYRIGHT 2024 ISRAELTRAVEL.CO.IL</p>
+                            <div class="info-links">
+                                <a href="#">TERMS & CONDITIONS</a>
+                                <a href="#">PRIVACY POLICY</a>
+                                <a href="#">FINANCIAL PROTECTION</a>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
